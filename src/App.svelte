@@ -1,13 +1,17 @@
 <script lang="ts">
-  export let name: string;
+  import ChatList from "./chat/ChatList.svelte";
+  import InvalidSecretKeyErrorPage from "./error/InvalidSecretKeyErrorPage.svelte";
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const secretKey: string | null = urlParams.get("key") || null;
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
-    how to build Svelte apps.
-  </p>
+  {#if secretKey}
+    <ChatList />
+  {:else}
+    <InvalidSecretKeyErrorPage />
+  {/if}
 </main>
 
 <style>
