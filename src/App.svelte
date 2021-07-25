@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ChatList from "./chat/ChatList.svelte";
+  import ChatPage from "./chat/ChatPage.svelte";
   import InvalidSecretKeyErrorPage from "./error/InvalidSecretKeyErrorPage.svelte";
 
   const urlParams = new URLSearchParams(window.location.search);
@@ -8,7 +8,7 @@
 
 <main>
   {#if secretKey}
-    <ChatList />
+    <ChatPage />
   {:else}
     <InvalidSecretKeyErrorPage />
   {/if}
