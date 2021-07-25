@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ChatPage from "./chat/ChatPage.svelte";
+  import ChatPage from "./view/chat/ChatPage.svelte";
   import InvalidSecretKeyErrorPage from "./error/InvalidSecretKeyErrorPage.svelte";
 
   const urlParams = new URLSearchParams(window.location.search);
