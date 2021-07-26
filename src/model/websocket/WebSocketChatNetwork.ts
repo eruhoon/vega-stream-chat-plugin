@@ -2,9 +2,11 @@ import { ChatNetwork } from "../network/ChatNetwork";
 
 export class WebSocketChatNetwork extends ChatNetwork {
   #socket: WebSocket;
+  #secretKey: string;
 
-  constructor(host: string) {
+  constructor(host: string, secretkey: string) {
     super();
+    this.#secretKey = secretkey;
     this.#socket = this.#createSocket(host);
   }
 
@@ -23,7 +25,7 @@ export class WebSocketChatNetwork extends ChatNetwork {
         commandType: "viewer-login",
         resource: {
           channel: "CHAT",
-          secretKey: "ttt",
+          secretKey: this.#secretKey,
         },
       })
     );

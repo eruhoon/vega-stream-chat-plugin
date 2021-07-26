@@ -8,7 +8,7 @@
 
 <main>
   {#if secretKey}
-    <ChatPage />
+    <ChatPage key={secretKey} />
   {:else}
     <InvalidSecretKeyErrorPage />
   {/if}
