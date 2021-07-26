@@ -7,7 +7,7 @@
   <span>{chat?.nickname} : {chat?.msg.response}</span>
 </div>
 
-<style>
+<style lang="scss">
   img {
     width: 30px;
     height: 30px;
