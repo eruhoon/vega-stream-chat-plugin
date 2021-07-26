@@ -6,7 +6,6 @@
   const prop = {
     chats: [],
   };
-  const MAX_LENGTH = 50;
 
   const network = new WebSocketChatNetwork("wss://mycast.xyz:8002", key);
   network.addOnChatListener((chat) => (prop.chats = [...prop.chats, chat]));
