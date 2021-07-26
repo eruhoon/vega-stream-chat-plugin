@@ -24,7 +24,7 @@ export class WebSocketChatNetwork extends ChatNetwork {
       JSON.stringify({
         commandType: "viewer-login",
         resource: {
-          channel: "CHAT",
+          channel: "chat",
           secretKey: this.#secretKey,
         },
       })
@@ -36,7 +36,12 @@ export class WebSocketChatNetwork extends ChatNetwork {
     switch (message.commandType) {
       case "applyCurrentChatList":
         this.notifyChatsLoad(message.response);
-        return;
+        break;
+      case "chat":
+        this.notifyChat(message.response);
+        break;
+      default:
+        console.log("not implemented");
     }
   }
 
