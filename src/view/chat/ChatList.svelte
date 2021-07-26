@@ -17,5 +17,6 @@
     height: 100%;
     flex-direction: column;
     justify-content: flex-end;
+    overflow: hidden;
   }
 </style>
