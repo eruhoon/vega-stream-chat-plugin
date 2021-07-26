@@ -2,6 +2,11 @@
   import ChatEntry from "./ChatEntry.svelte";
 
   export let chats = [];
+  const MAX_LENGTH = 50;
+
+  $: if (chats.length > MAX_LENGTH) {
+    chats = chats.slice(chats.length - MAX_LENGTH);
+  }
 </script>
 
 <div class="list">
