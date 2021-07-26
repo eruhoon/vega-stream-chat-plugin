@@ -9,7 +9,9 @@ export abstract class ChatNetwork {
   }
 
   removeOnChatsLoadListener(listener: OnChatsLoadListener): void {
-    this.#onChatListeners = this.#onChatListeners.filter((l) => l !== listener);
+    this.#onChatsLoadListeners = this.#onChatsLoadListeners.filter(
+      (l) => l !== listener
+    );
   }
 
   clearOnChatsLoadListener(): void {
