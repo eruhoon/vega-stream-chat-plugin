@@ -11,8 +11,12 @@ export class WebSocketChatNetwork extends ChatNetwork {
   #createSocket(host: string): WebSocket {
     const socket = new WebSocket(host);
     // socket.onopen = () => this.onOpenSocket();
-    // socket.onmessage = (message) => this.onRawMessage(message);
+    socket.onmessage = (message) => this.#onRawMessage(message);
     // socket.onclose = () => this.onClose();
     return socket;
+  }
+
+  #onRawMessage(message: MessageEvent<any>): void {
+    console.log(message);
   }
 }
