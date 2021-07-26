@@ -2,14 +2,15 @@
   export let chat: Chat;
 </script>
 
-<div>
-  <img src={chat.icon} alt="icon" />
-  <span>{chat.nickname} : {chat.msg.response}</span>
+<div class="chatEnty">
+  <img class="chatImg" src={chat.icon} alt="icon" />
+  <span class="chatTxt">
+    <p class="nickname">{chat.nickname}</p>
+    <p class="divide">:</p>
+    <p class="msg">{chat.msg.response}</p>
+  </span>
 </div>
 
 <style lang="scss">
-  img {
-    width: 30px;
-    height: 30px;
-  }
+  @use './preset/ChatDefBlackBox.scss';
 </style>
