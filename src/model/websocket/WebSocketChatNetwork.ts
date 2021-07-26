@@ -10,13 +10,35 @@ export class WebSocketChatNetwork extends ChatNetwork {
 
   #createSocket(host: string): WebSocket {
     const socket = new WebSocket(host);
-    // socket.onopen = () => this.onOpenSocket();
-    socket.onmessage = (message) => this.#onRawMessage(message);
-    // socket.onclose = () => this.onClose();
+    socket.onopen = () => this.#onOpenSocket();
+    socket.onmessage = (event) => this.#onRawMessage(event);
+    socket.onclose = () => this.onClose();
     return socket;
   }
 
-  #onRawMessage(message: MessageEvent<any>): void {
-    console.log(message);
+  #onOpenSocket(): void {
+    console.log("open");
+    this.#socket.send(
+      JSON.stringify({
+        commandType: "viewer-login",
+        resource: {
+          channel: "CHAT",
+          secretKey: "ttt",
+        },
+      })
+    );
+  }
+
+  #onRawMessage(messageEvent: MessageEvent<any>): void {
+    const message = JSON.parse(messageEvent.data);
+    switch (message.commandType) {
+      case "applyCurrentChatList":
+        this.notifyChatsLoad(message.response);
+        return;
+    }
+  }
+
+  onClose(): void {
+    console.log("closed");
   }
 }

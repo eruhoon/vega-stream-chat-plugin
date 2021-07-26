@@ -1,9 +1,15 @@
 <script lang="ts">
-  export let nickname = "unknown";
-  export let message = "";
+  export let chat: Chat | null = null;
 </script>
 
 <div>
-  <div>{nickname}</div>
-  <div>{message}</div>
+  <img src={chat?.icon} />
+  <span>{chat?.nickname} : {chat?.msg.response}</span>
 </div>
+
+<style>
+  img {
+    width: 30px;
+    height: 30px;
+  }
+</style>

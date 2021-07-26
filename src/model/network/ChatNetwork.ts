@@ -16,6 +16,10 @@ export abstract class ChatNetwork {
     this.#onChatsLoadListeners = [];
   }
 
+  notifyChatsLoad(chats: Chat[]): void {
+    this.#onChatsLoadListeners.forEach((listener) => listener(chats));
+  }
+
   addOnChatListener(listener: OnChatListener): void {
     if (!this.#onChatListeners.find((l) => l === listener)) {
       this.#onChatListeners.push(listener);
