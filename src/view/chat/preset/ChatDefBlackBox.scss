@@ -1,0 +1,53 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(//fonts.googleapis.com/css?family=Nanum+Gothic);
+
+*{margin: 0 auto;padding: 0px; font-family: 'Nanum Barun Gothic', sans-serif;}
+
+div.chatEnty{
+  background: -moz-linear-gradient(top,  rgba(33,33,33,0.75) 0%, rgba(33,33,33,0.75) 100%);
+  background: -webkit-linear-gradient(top,  rgba(33,33,33,0.75) 0%,rgba(33,33,33,0.75) 100%);
+  background: linear-gradient(to bottom,  rgba(33,33,33,0.75) 0%,rgba(33,33,33,0.75) 100%);
+  color: #fff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #424242;
+  width: calc(100% - 15px);
+  height: 50px;
+  padding: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0) inset;
+  img.chatImg {
+    width: 28px;
+    height: 28px;
+    border-radius:15px;
+    margin-right: 5px;
+    border:1px solid #424242;
+    display: inline-block;
+    vertical-align: top;
+  }
+  span.chatTxt {
+    width: calc(100% - 45px);
+    display: inline-block;
+    overflow: hidden;
+    p.nickname{
+      width: 100%;
+      font-family: 'Jeju Gothic', sans-serif;
+      font-weight: bolder;
+      font-size:12px;
+      text-shadow: 0 1px 3px rgb(0 0 0 / 75%);
+      color:#EC407A;
+    }
+    p.divide{
+      display: none;
+    }
+    p.msg {
+      width: 100%;
+      font-family: 'Jeju Gothic', sans-serif;
+      text-shadow: 0 1px 3px rgb(0 0 0 / 75%);
+      font-weight: bolder;
+      padding:0px;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+    }
+  }
+}
