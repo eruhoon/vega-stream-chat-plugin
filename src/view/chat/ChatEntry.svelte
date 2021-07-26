@@ -1,10 +1,10 @@
 <script lang="ts">
-  export let chat: Chat | null = null;
+  export let chat: Chat;
 </script>
 
 <div>
-  <img src={chat?.icon} alt="icon" />
-  <span>{chat?.nickname} : {chat?.msg.response}</span>
+  <img src={chat.icon} alt="icon" />
+  <span>{chat.nickname} : {chat.msg.response}</span>
 </div>
 
 <style lang="scss">
