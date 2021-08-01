@@ -1,0 +1,148 @@
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(//fonts.googleapis.com/css?family=Nanum+Gothic);
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.abc {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+
+* {
+  margin: 0 auto;
+  padding: 0px;
+  font-family: "Nanum Barun Gothic", sans-serif;
+}
+
+div.chatEnty {
+  background: -moz-linear-gradient(
+    top,
+    rgba(33, 33, 33, 0.15) 0%,
+    rgba(33, 33, 33, 0.15) 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(33, 33, 33, 0.15) 0%,
+    rgba(33, 33, 33, 0.15) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 33, 33, 0.15) 0%,
+    rgba(33, 33, 33, 0.15) 100%
+  );
+  color: #fff;
+  margin-bottom: 10px;
+  //border: 1px solid #424242;
+  width: calc(100% - 15px);
+  height: 50px;
+  padding: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 40px rgba(0, 0, 0, 0) inset;
+
+  opacity: 0.01;
+  img.chatImg {
+    width: 60px;
+    height: 60px;
+    margin: -5px;
+    margin-right: 5px;
+    border-right: 5px solid #fd1e4b;
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0.01;
+  }
+  span.chatTxt {
+    width: calc(100% - 80px);
+    display: inline-block;
+    overflow: hidden;
+    opacity: 0.01;
+    p.nickname {
+      width: 100%;
+      font-family: "Jeju Gothic", sans-serif;
+      font-weight: bolder;
+      font-size: 14px;
+      color: #757575;
+    }
+    p.divide {
+      display: none;
+    }
+    p.msg {
+      width: 100%;
+      font-family: "Jeju Gothic", sans-serif;
+      font-weight: bolder;
+      padding: 0px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &:nth-last-child(7) {
+    opacity: 0.1;
+    img.chatImg,
+    span.chatTxt {
+      opacity: 0.1;
+    }
+  }
+  &:nth-last-child(6) {
+    opacity: 0.2;
+    img.chatImg,
+    span.chatTxt {
+      opacity: 0.2;
+    }
+  }
+  &:nth-last-child(5) {
+    opacity: 0.4;
+    img.chatImg,
+    span.chatTxt {
+      opacity: 0.4;
+    }
+  }
+  &:nth-last-child(4) {
+    opacity: 0.6;
+    img.chatImg,
+    span.chatTxt {
+      opacity: 0.6;
+    }
+  }
+  &:nth-last-child(3) {
+    opacity: 0.8;
+    img.chatImg,
+    span.chatTxt {
+      opacity: 0.8;
+    }
+  }
+  &:nth-last-child(2) {
+    opacity: 1;
+    img.chatImg,
+    span.chatTxt {
+      opacity: 1;
+    }
+  }
+  &:last-child {
+    background: #fd1e4b;
+    background: -moz-linear-gradient(45deg, #fd1e4b 0%, #fb38a6 100%);
+    background: -webkit-linear-gradient(45deg, #fd1e4b 0%, #fb38a6 100%);
+    background: linear-gradient(45deg, #fd1e4b 0%, #fb38a6 100%);
+    opacity: 1;
+
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    img.chatImg {
+      border-right-color: #fb38a6;
+    }
+    img.chatImg,
+    span.chatTxt {
+      opacity: 1;
+      p.nickname {
+        color: #fff;
+      }
+    }
+  }
+}
