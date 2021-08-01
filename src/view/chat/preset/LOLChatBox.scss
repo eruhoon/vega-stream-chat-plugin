@@ -1,0 +1,80 @@
+@import url(//fonts.googleapis.com/css?family=Nanum+Gothic);
+
+* {
+  margin: 0 auto;
+  padding: 0px;
+  font-family: "Nanum Barun Gothic", sans-serif;
+}
+
+div.chatEnty {
+  color: #fff;
+  margin-bottom: 10px;
+  //border: 1px solid #424242;
+  width: calc(100% - 15px);
+  height: 20px;
+  padding-bottom: 5px;
+  margin: 0px;
+  &:nth-child(even) {
+    span.chatTxt {
+      p.nickname,
+      p.divide {
+        color: #1976d2;
+      }
+    }
+  }
+
+  img.chatImg {
+    width: 20px;
+    height: 20px;
+    margin: -5px;
+    margin-right: 5px;
+    border-right: 5px solid #fd1e4b;
+    display: inline-block;
+    vertical-align: top;
+    display: none;
+  }
+  span.chatTxt {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    p.nickname {
+      width: auto;
+      font-family: "Nanum Barun Gothic", sans-serif;
+      font-weight: bolder;
+      font-size: 16px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #fd1e4b;
+      text-shadow: 0 1px 3px rgb(0 0 0 / 75%);
+      display: inline-block;
+    }
+    p.divide {
+      font-family: "Nanum Barun Gothic", sans-serif;
+      font-weight: bolder;
+      font-size: 16px;
+      padding-right: 5px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #fd1e4b;
+      text-shadow: 0 1px 3px rgb(0 0 0 / 75%);
+      display: inline-block;
+    }
+    p.msg {
+      width: auto;
+      font-family: "Nanum Barun Gothic", sans-serif;
+      font-weight: bolder;
+      padding: 0px;
+      font-size: 16px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-shadow: 0 1px 3px rgb(0 0 0 / 75%);
+      color: #ffffff;
+    }
+  }
+}
